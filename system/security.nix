@@ -5,9 +5,7 @@
   ];
 
   security = {
-    sudo.enable = false;
-    sudo-rs = {
-      enable = true;
+    sudo = {
       extraConfig = "Defaults lecture=never";
       wheelNeedsPassword = false;
     };

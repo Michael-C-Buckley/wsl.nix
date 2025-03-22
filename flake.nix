@@ -29,7 +29,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./base.nix
-        inputs.michael-home.nixosModules.hjem.default
+        inputs.michael-home.nixosModules.hjem.wsl
       ];
     };
   };
