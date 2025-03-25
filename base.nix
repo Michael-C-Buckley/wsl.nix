@@ -9,6 +9,8 @@ in {
     ./system
   ];
 
+  # Fonts have an error but aren't being used anyway
+  # features.pkgs.fonts = false;
 
   wsl = {
     enable = true;

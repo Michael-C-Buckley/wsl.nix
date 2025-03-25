@@ -20,11 +20,9 @@
   };
 
   networking = {
-    nftables.enable = true;
     firewall = {
       enable = true;
       allowPing =  true;
-      pingLimit = "2/second burst 5 packets";
     };
   };
 }
