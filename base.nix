@@ -9,13 +9,13 @@ in {
     ./system
   ];
 
-  # Fonts have an error but aren't being used anyway
-  # features.pkgs.fonts = false;
-
   wsl = {
     enable = true;
     defaultUser = "michael";
   };
 
-  networking.hostName = "wsl";
+  networking = {
+    hostName = "wsl";
+    nameservers = ["1.1.1.1" "8.8.8.8" "9.9.9.9"];
+  };
 }
