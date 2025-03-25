@@ -7,13 +7,12 @@
     fira-code
     jetbrains-mono
     symbols-only
-    iosevka
     zed-mono
   ];
 in {
   fonts.packages = with pkgs; lib.optionals useFonts [
     vista-fonts
-    maple-mono
+    # maple-mono
     b612
     font-awesome
   ] ++ nerdFonts;
