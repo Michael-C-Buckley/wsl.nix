@@ -14,6 +14,8 @@
     hjem.follows = "michael-home/hjem";
     wfetch.url = "github:iynaix/wfetch";
 
+    zed.url = "github:/zed-industries/zed";
+
     # Custom Modules
     nix-devshells.url = "github:Michael-C-Buckley/nix-devshells";
     nixos-modules.url = "github:Michael-C-Buckley/nixos-modules";

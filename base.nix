@@ -9,6 +9,11 @@ in {
     ./system
   ];
 
+  # Currently fails to build
+  features.michael.packages.zed = {
+    include = false;
+  };
+
   wsl = {
     enable = true;
     defaultUser = "michael";
