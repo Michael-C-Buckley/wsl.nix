@@ -10,9 +10,8 @@ in {
     ./system
   ];
 
-  # Currently fails to build
   features.michael.packages.zed = {
-    include = false;
+    include = true;
   };
 
   networking = {
