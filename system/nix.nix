@@ -1,18 +1,16 @@
-{pkgs, lib, ...}: {
+{pkgs, ...}: {
   nixpkgs = {
-    config.allowUnfree = lib.mkDefault true;
+    config.allowUnfree = true;
     hostPlatform = "x86_64-linux";
   };
 
   nix = {
-    package = pkgs.nixVersions.latest;
     settings = {
       auto-optimise-store = true;
       warn-dirty = false;
       experimental-features = [
         "nix-command"
         "flakes"
-        "pipe-operators"
       ];
       substituters = [
         "https://cache.nixos.org"
