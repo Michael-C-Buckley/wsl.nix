@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    lix.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-2.tar.gz";
 
     # User configs
     michael-home = {
@@ -32,6 +33,7 @@
       modules = [
         ./base.nix
         inputs.michael-home.nixosModules.hjem.wsl
+        inputs.lix.nixosModules.default
       ];
     };
   };

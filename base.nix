@@ -4,6 +4,7 @@ in {
   imports = [
     vscode-server.nixosModules.default
     nixos-wsl.nixosModules.default
+    ./modules
     ./pkgs
     ./programs
     ./system
@@ -12,11 +13,6 @@ in {
   # Currently fails to build
   features.michael.packages.zed = {
     include = false;
-  };
-
-  wsl = {
-    enable = true;
-    defaultUser = "michael";
   };
 
   networking = {
