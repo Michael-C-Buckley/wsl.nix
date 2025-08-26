@@ -1,9 +1,4 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    ragenix
-    sops
-  ];
-
+_: {
   security = {
     sudo = {
       extraConfig = "Defaults lecture=never";
@@ -12,7 +7,6 @@
   };
 
   services = {
-    vscode-server.enable = true;
     openssh = {
       enable = true;
       openFirewall = true;
@@ -20,9 +14,10 @@
   };
 
   networking = {
+    nftables.enable = true;
     firewall = {
       enable = true;
-      allowPing =  true;
+      allowPing = true;
     };
   };
 }

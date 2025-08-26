@@ -1,40 +1,71 @@
 {
-  description = "NixOS WSL Flake";
+  description = "Michael's WSL Flake";
+
+  outputs = {flake-parts, ...} @ inputs:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = import inputs.systems;
+
+      flake = {
+        nixosConfigurations = import ./outputs/nixosConfigurations.nix {inherit inputs;};
+      };
+
+      # perSystem = {system, ...}: {
+      #   devShells = "";
+      # };
+    };
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
-    lix.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-2.tar.gz";
+    nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
+    flake-parts.url = "git+https://github.com/hercules-ci/flake-parts?shallow=1";
+    systems.url = "git+https://github.com/nix-systems/default?shallow=1";
 
-    # User configs
+    nix-secrets = {
+      url = "git+ssh://git@github.com/michael-c-buckley/nix-secrets?shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixos-wsl = {
+      url = "git+https://github.com/nix-community/nixos-wsl?shallow=1&ref=main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     michael-home = {
       url = "github:Michael-C-Buckley/home-config";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+        systems.follows = "systems";
+        hjem.follows = "hjem";
+        hjem-rum.follows = "hjem-rum";
+        home-manager.follows = "";
+      };
     };
-    hjem.follows = "michael-home/hjem";
-    wfetch.url = "github:iynaix/wfetch";
 
-    zed.url = "github:/zed-industries/zed";
+    hjem = {
+      url = "git+https://github.com/feel-co/hjem?shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    # Custom Modules
-    nix-devshells.url = "github:Michael-C-Buckley/nix-devshells";
-    nixos-modules.url = "github:Michael-C-Buckley/nixos-modules";
+    hjem-rum = {
+      url = "git+https://github.com/snugnug/hjem-rum?shallow=1";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        hjem.follows = "hjem";
+      };
+    };
 
-    # Utilities
-    vscode-server.url = "github:nix-community/nixos-vscode-server";
-  };
+    sops-nix = {
+      url = "git+https://github.com/Mic92/sops-nix?shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-  outputs = {nixpkgs, nix-devshells, ...} @ inputs: {
-    checks = nix-devshells.checks;
-    devShells.x86_64-linux.default = nix-devshells.devShells.x86_64-linux.nixos;
-    nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./base.nix
-        inputs.michael-home.nixosModules.hjem.wsl
-        inputs.lix.nixosModules.default
-      ];
+    nvf = {
+      url = "git+https://github.com/notashelf/nvf?shallow=1";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+        systems.follows = "systems";
+      };
     };
   };
 }

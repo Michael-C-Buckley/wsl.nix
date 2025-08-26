@@ -1,5 +1,16 @@
 _: {
   imports = [
+    ./nix.nix
+    ./packages.nix
+    ./programs.nix
+    ./security.nix
     ./wsl.nix
   ];
+
+  time.timeZone = "America/New_York";
+
+  users.users.michael = {
+    isNormalUser = true;
+    extraGroups = ["networkmanager" "wheel" "video" "wireshark"];
+  };
 }

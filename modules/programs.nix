@@ -1,5 +1,17 @@
 {pkgs, ...}: {
   programs = {
+    bat = {
+      enable = true;
+      extraPackages = with pkgs.bat-extras; [
+        batdiff
+        batgrep
+        batman
+        batwatch
+        prettybat
+        batpipe
+      ];
+    };
+
     direnv = {
       silent = false;
       loadInNixShell = true;
@@ -9,10 +21,7 @@
       };
     };
 
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-    };
+    neovim.defaultEditor = true;
 
     winbox = {
       enable = true;
@@ -20,8 +29,9 @@
       openFirewall = true;
     };
 
-    wireshark.enable = true;
 
+    wireshark.enable = true;
     zsh.enable = true;
+    zoxide.enable = true;
   };
 }
