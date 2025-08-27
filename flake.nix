@@ -9,9 +9,9 @@
         nixosConfigurations = import ./outputs/nixosConfigurations.nix {inherit inputs;};
       };
 
-      # perSystem = {system, ...}: {
-      #   devShells = "";
-      # };
+       perSystem = {pkgs, ...}: {
+         devShells.default = import ./outputs/devShells.nix {inherit pkgs;};
+       };
     };
 
   inputs = {
