@@ -92,10 +92,10 @@
         "smfh": "smfh"
       },
       "locked": {
-        "lastModified": 1756046137,
-        "narHash": "sha256-AS8mTZyvQDvP3XgSLPp/DI0GFhvdMlxcQBWTR48mBjU=",
+        "lastModified": 1756255328,
+        "narHash": "sha256-WJ70Dv+tJjIl7mMOqUgcdcz+RrujDRoeKptiU6oh1lI=",
         "ref": "refs/heads/main",
-        "rev": "ce24546f7f552bb92315e013f2599776e0b33249",
+        "rev": "2426d6ad20e767895e936ed0c9563cc4e2b6c96f",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/feel-co/hjem"
@@ -152,17 +152,18 @@
         ]
       },
       "locked": {
-        "lastModified": 1756206190,
-        "narHash": "sha256-p8iyydjDf4DPtkvzVRjoijGmHbrFJGT0LNK+pWitNCY=",
-        "owner": "Michael-C-Buckley",
-        "repo": "home-config",
-        "rev": "49863c11ae51d6e8bea6465aa4b3191ac2e9ed0d",
-        "type": "github"
+        "lastModified": 1756340070,
+        "narHash": "sha256-5VyC1ab6HEwBDQm1OWSEeArz3IENS7GuvCR5p8OGbcg=",
+        "ref": "refs/heads/master",
+        "rev": "703139798095af3f17629a380f932e86c12eb448",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/Michael-C-Buckley/home-config"
       },
       "original": {
-        "owner": "Michael-C-Buckley",
-        "repo": "home-config",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/Michael-C-Buckley/home-config"
       }
     },
     "mnw": {

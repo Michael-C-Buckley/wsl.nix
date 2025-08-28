@@ -30,7 +30,7 @@
     };
 
     michael-home = {
-      url = "github:Michael-C-Buckley/home-config";
+      url = "git+https://github.com/Michael-C-Buckley/home-config?shallow=1";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         flake-parts.follows = "flake-parts";
