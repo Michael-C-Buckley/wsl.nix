@@ -1,5 +1,5 @@
 {inputs}: let 
-  inherit (inputs) nixpkgs nixos-wsl hjem nix-secrets sops-nix;
+  inherit (inputs) nixpkgs;
   
   # This is the only architecture I use here
   system = "x86_64-linux"; 
@@ -13,12 +13,14 @@ in {
             inherit system;
             config.allowUnfree = true;
         };
-        modules = [
+        modules = with inputs; [
             nixos-wsl.nixosModules.default
             hjem.nixosModules.default
             sops-nix.nixosModules.sops
             nix-secrets.nixosModules.ssh
             nix-secrets.nixosModules.common
+            michael-home.hjemConfigurations.default
+        ] ++ [
             ../configurations/wsl.nix
             ../modules
         ];
