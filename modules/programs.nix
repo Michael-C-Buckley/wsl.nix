@@ -13,6 +13,7 @@
     };
 
     direnv = {
+      enable = true;
       silent = false;
       loadInNixShell = true;
       nix-direnv = {
@@ -21,15 +22,9 @@
       };
     };
 
+    # Nvim default, NVF provides the actual package
     neovim.defaultEditor = true;
 
-    winbox = {
-      enable = true;
-      package = pkgs.winbox4;
-      openFirewall = true;
-    };
-
-    wireshark.enable = true;
     zsh.enable = true;
     zoxide.enable = true;
   };
