@@ -1,5 +1,7 @@
 _: {
   imports = [
+    ./gpg.nix
+    ./network.nix
     ./nix.nix
     ./packages.nix
     ./programs.nix

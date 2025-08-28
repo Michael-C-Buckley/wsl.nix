@@ -29,7 +29,6 @@
       openFirewall = true;
     };
 
-
     wireshark.enable = true;
     zsh.enable = true;
     zoxide.enable = true;

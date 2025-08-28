@@ -1,6 +1,4 @@
-{
-  pkgs, ...
-}:
+{pkgs, ...}:
 pkgs.mkShellNoCC {
   buildInputs = with pkgs; [
     # keep-sorted start

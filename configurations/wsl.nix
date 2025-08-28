@@ -1,6 +1,13 @@
 _: {
-    networking = {
-      hostId = "e07f0101";
+  networking = {
+    hostName = "wsl";
+    hostId = "e07f0101";
+    nameservers = [
+      "::1"
+      "127.0.0.1"
+      "1.1.1.1"
+      "9.9.9.9"
+    ];
     networkmanager = {
       enable = true;
       unmanaged = ["*"];
