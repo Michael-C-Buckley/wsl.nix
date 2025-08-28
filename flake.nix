@@ -29,7 +29,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    michael-home = {
+    home = {
       url = "git+https://github.com/Michael-C-Buckley/home-config?shallow=1";
       inputs = {
         nixpkgs.follows = "nixpkgs";

@@ -132,7 +132,7 @@
         "url": "https://github.com/snugnug/hjem-rum"
       }
     },
-    "michael-home": {
+    "home": {
       "inputs": {
         "flake-parts": [
           "flake-parts"
@@ -152,10 +152,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1756340070,
-        "narHash": "sha256-5VyC1ab6HEwBDQm1OWSEeArz3IENS7GuvCR5p8OGbcg=",
+        "lastModified": 1756378972,
+        "narHash": "sha256-+qjk6lbGq54NTs13hsIIV14Dk/xfXmMD2OgfOIzyokA=",
         "ref": "refs/heads/master",
-        "rev": "703139798095af3f17629a380f932e86c12eb448",
+        "rev": "7bfd72c3532009d71293b25aa577dadeba1c8202",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/Michael-C-Buckley/home-config"
@@ -325,7 +325,7 @@
         "flake-parts": "flake-parts",
         "hjem": "hjem",
         "hjem-rum": "hjem-rum",
-        "michael-home": "michael-home",
+        "home": "home",
         "nix-secrets": "nix-secrets",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs",
