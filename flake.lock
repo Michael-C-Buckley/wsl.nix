@@ -132,10 +132,10 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1755481525,
-        "narHash": "sha256-HnKSN39AuEa8MuzwVRh816rddZjTGLRN/A9dvzlfjhA=",
+        "lastModified": 1756494309,
+        "narHash": "sha256-QW6npS8+CBlNQ9a2C23MzdcAT6Puy5c7N8r7L1I31r8=",
         "ref": "refs/heads/main",
-        "rev": "7c639526ac8e4c3674221e6dcc9ab0f7c7a42a16",
+        "rev": "397e73ca7ac236ac5209f8d1d42c682e5ee558e5",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/snugnug/hjem-rum"
@@ -168,10 +168,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1756497470,
-        "narHash": "sha256-/N4pLZxON4fHe66+tk9grSxQiIQB2ZYbtfIT3kfnfgo=",
+        "lastModified": 1756502144,
+        "narHash": "sha256-eNhtRC9NZ4qdBLIPogQ15Y+UmW48eHRj8ihmb3Yu3cE=",
         "ref": "refs/heads/master",
-        "rev": "cffc732fe88b79f4faadc7948985f183e39a5f7d",
+        "rev": "3bb7fe29ec876525d39bc854af8eb46446759a14",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/Michael-C-Buckley/home-config"
@@ -266,11 +266,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1756182766,
-        "narHash": "sha256-Kk8sdRChYP/YFtI4utFYTPPFlfgnnZrahBcnuplSRbY=",
-        "rev": "3b9f00d7a7bf68acd4c4abb9d43695afb04e03a5",
+        "lastModified": 1756479261,
+        "narHash": "sha256-z4vdYBMStriKK8FE5apd/8oJDdIttr02o9rwqHQDb0o=",
+        "rev": "dfb2f12e899db4876308eba6d93455ab7da304cd",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre851350.3b9f00d7a7bf/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre853093.dfb2f12e899d/nixexprs.tar.xz"
       },
       "original": {
         "type": "tarball",
