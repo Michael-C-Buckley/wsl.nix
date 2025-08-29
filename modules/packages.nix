@@ -12,7 +12,6 @@
 
     # Browsers
     librewolf
-    ungoogled-chromium
 
     # Shells
     nushell

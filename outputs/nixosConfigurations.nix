@@ -20,7 +20,7 @@ in {
         sops-nix.nixosModules.sops
         nix-secrets.nixosModules.ssh
         nix-secrets.nixosModules.common
-        home.hjemConfigurations.minimal
+        home.hjemConfigurations.wsl
       ]
       ++ [
         ../configurations/wsl.nix
