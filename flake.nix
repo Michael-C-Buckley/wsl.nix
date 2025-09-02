@@ -10,7 +10,7 @@
       };
 
       perSystem = {pkgs, ...}: {
-        devShells.default = import ./outputs/devShells.nix {inherit pkgs;};
+        devShells = import ./outputs/devShells.nix {inherit pkgs;};
       };
     };
 
