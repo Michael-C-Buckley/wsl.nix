@@ -35,22 +35,6 @@
         nixpkgs.follows = "nixpkgs";
         flake-parts.follows = "flake-parts";
         systems.follows = "systems";
-        hjem.follows = "hjem";
-        hjem-rum.follows = "hjem-rum";
-        home-manager.follows = "";
-      };
-    };
-
-    hjem = {
-      url = "git+https://github.com/feel-co/hjem?shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    hjem-rum = {
-      url = "git+https://github.com/snugnug/hjem-rum?shallow=1";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        hjem.follows = "hjem";
       };
     };
 

@@ -16,7 +16,6 @@ in {
     modules = with inputs;
       [
         nixos-wsl.nixosModules.default
-        hjem.nixosModules.default
         sops-nix.nixosModules.sops
         nix-secrets.nixosModules.ssh
         nix-secrets.nixosModules.common
