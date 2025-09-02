@@ -21,6 +21,9 @@
       };
     };
 
+                # Allows vscode remotes to connect
+                nix-ld.enable = true;
+
     # Nvim default, NVF provides the actual package
     neovim.defaultEditor = true;
 
