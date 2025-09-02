@@ -1,7 +1,4 @@
-{
-  config,
-  ...
-}: {
+{config, ...}: {
   services.unbound = {
     # Keep non-sensitive settings here
     settings = {
