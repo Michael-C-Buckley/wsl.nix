@@ -16,8 +16,8 @@
 
   inputs = {
     nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
-    flake-parts.url = "git+https://github.com/hercules-ci/flake-parts?shallow=1";
-    systems.url = "git+https://github.com/nix-systems/default?shallow=1";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    systems.url = "github:nix-systems/default";
 
     nix-secrets = {
       url = "git+ssh://git@github.com/michael-c-buckley/nix-secrets?shallow=1";
@@ -25,12 +25,12 @@
     };
 
     nixos-wsl = {
-      url = "git+https://github.com/nix-community/nixos-wsl?shallow=1&ref=main";
+      url = "github:nix-community/nixos-wsl";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     home = {
-      url = "git+https://github.com/Michael-C-Buckley/home-config?shallow=1";
+      url = "github:Michael-C-Buckley/home-config";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         flake-parts.follows = "flake-parts";
@@ -39,7 +39,7 @@
     };
 
     sops-nix = {
-      url = "git+https://github.com/Mic92/sops-nix?shallow=1";
+      url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

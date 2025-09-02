@@ -53,16 +53,15 @@
       "locked": {
         "lastModified": 1756770412,
         "narHash": "sha256-+uWLQZccFHwqpGqr2Yt5VsW/PbeJVTn9Dk6SHWhNRPw=",
-        "ref": "refs/heads/main",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
         "rev": "4524271976b625a4a605beefd893f270620fd751",
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/hercules-ci/flake-parts"
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/hercules-ci/flake-parts"
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
       }
     },
     "hercules-ci-effects": {
@@ -136,16 +135,15 @@
       "locked": {
         "lastModified": 1756736368,
         "narHash": "sha256-POWf3+Y3+00axDVaNjU7h1T26okrVHQwTHrESBbPxRI=",
-        "ref": "refs/heads/master",
+        "owner": "Michael-C-Buckley",
+        "repo": "home-config",
         "rev": "d2da5bb52034bfdc4de9268ce6786af5e3af9d82",
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/Michael-C-Buckley/home-config"
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/Michael-C-Buckley/home-config"
+        "owner": "Michael-C-Buckley",
+        "repo": "home-config",
+        "type": "github"
       }
     },
     "home-manager": {
@@ -156,11 +154,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1756788591,
-        "narHash": "sha256-LOrOfPWpJU/ADWDyVwPv9XNuYPq5KJtmAmSzplpccmE=",
+        "lastModified": 1756579987,
+        "narHash": "sha256-duCce8zGsaMsrqqOmLOsuaV1PVIw/vXWnKuLKZClsGg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f3d3b4592a73fb64b5423234c01985ea73976596",
+        "rev": "99a69bdf8a3c6bf038c4121e9c4b6e99706a187a",
         "type": "github"
       },
       "original": {
@@ -215,17 +213,15 @@
       "locked": {
         "lastModified": 1755261305,
         "narHash": "sha256-EOqCupB5X5WoGVHVcfOZcqy0SbKWNuY3kq+lj1wHdu8=",
-        "ref": "main",
+        "owner": "nix-community",
+        "repo": "nixos-wsl",
         "rev": "203a7b463f307c60026136dd1191d9001c43457f",
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/nix-community/nixos-wsl"
+        "type": "github"
       },
       "original": {
-        "ref": "main",
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/nix-community/nixos-wsl"
+        "owner": "nix-community",
+        "repo": "nixos-wsl",
+        "type": "github"
       }
     },
     "nixpak": {
@@ -451,16 +447,15 @@
       "locked": {
         "lastModified": 1754988908,
         "narHash": "sha256-t+voe2961vCgrzPFtZxha0/kmFSHFobzF00sT8p9h0U=",
-        "ref": "refs/heads/master",
+        "owner": "Mic92",
+        "repo": "sops-nix",
         "rev": "3223c7a92724b5d804e9988c6b447a0d09017d48",
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/Mic92/sops-nix"
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/Mic92/sops-nix"
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "type": "github"
       }
     },
     "systems": {
@@ -482,16 +477,15 @@
       "locked": {
         "lastModified": 1681028828,
         "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "ref": "refs/heads/main",
+        "owner": "nix-systems",
+        "repo": "default",
         "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/nix-systems/default"
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/nix-systems/default"
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
       }
     }
   },
