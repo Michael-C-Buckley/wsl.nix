@@ -22,5 +22,5 @@ _: {
     stateVersion = "24.11";
   };
 
-  virtualisation.podman.enable = true;
+  virtualisation.docker.enable = true;
 }

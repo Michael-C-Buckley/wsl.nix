@@ -45,5 +45,8 @@
     inetutils
     ndisc6
     frr
+
+    # Virtualization
+    containerlab
   ];
 }
