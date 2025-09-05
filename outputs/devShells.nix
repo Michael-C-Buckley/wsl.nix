@@ -17,12 +17,14 @@
       keep-sorted
       lefthook
       nil
+      rage
       shellcheck
       shfmt
+      sops
       statix
       taplo
-      tig
       treefmt
+      typos
       # keep-sorted end
     ];
 
