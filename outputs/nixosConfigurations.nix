@@ -1,26 +1,28 @@
-{inputs}: let
+{inputs, ...}: let
   inherit (inputs) nixpkgs;
 
   # This is the only architecture I use here
   system = "x86_64-linux";
 in {
-  wsl = nixpkgs.lib.nixosSystem {
-    inherit system;
-    specialArgs = {inherit inputs system;};
-    pkgs = import nixpkgs {
+  flake.nixosConfigurations = {
+    wsl = nixpkgs.lib.nixosSystem {
       inherit system;
-      config.allowUnfree = true;
+      specialArgs = {inherit inputs system;};
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      modules = with inputs;
+        [
+          nixos-wsl.nixosModules.default
+          sops-nix.nixosModules.sops
+          nix-secrets.nixosModules.wsl
+          home.hjemConfigurations.wsl
+        ]
+        ++ [
+          ../configurations/wsl.nix
+          ../modules
+        ];
     };
-    modules = with inputs;
-      [
-        nixos-wsl.nixosModules.default
-        sops-nix.nixosModules.sops
-        nix-secrets.nixosModules.common
-        home.hjemConfigurations.wsl
-      ]
-      ++ [
-        ../configurations/wsl.nix
-        ../modules
-      ];
   };
 }

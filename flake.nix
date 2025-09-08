@@ -5,13 +5,8 @@
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = import inputs.systems;
 
-      flake = {
-        nixosConfigurations = import ./outputs/nixosConfigurations.nix {inherit inputs;};
-      };
-
-      perSystem = {pkgs, ...}: {
-        devShells = import ./outputs/devShells.nix {inherit pkgs;};
-      };
+      # All outputs are defined in various modules here
+      imports = [./outputs];
     };
 
   inputs = {

@@ -14,13 +14,7 @@ _: {
     };
   };
 
-  services = {
-    unbound.enable = true;
-  };
-
-  system = {
-    stateVersion = "24.11";
-  };
-
+  services.unbound.enable = true;
+  system.stateVersion = "24.11";
   virtualisation.docker.enable = true;
 }
