@@ -1,5 +1,5 @@
-{pkgs, ...}: {
-  perSystem = {pkgs,...}: {
+{
+  perSystem = {pkgs, ...}: {
     devShells.default = pkgs.mkShellNoCC {
       buildInputs = with pkgs; [
         # keep-sorted start

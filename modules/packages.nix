@@ -9,6 +9,8 @@
     fastfetch
     microfetch
     killall
+    hydra-cli
+    socat
 
     # Browsers
     librewolf
@@ -45,6 +47,7 @@
     inetutils
     ndisc6
     frr
+    nettools
 
     # Virtualization
     containerlab
