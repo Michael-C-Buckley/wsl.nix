@@ -6,9 +6,7 @@
 in {
   wsl = nixpkgs.lib.nixosSystem {
     inherit system;
-    specialArgs = {
-      inherit inputs system;
-    };
+    specialArgs = {inherit inputs system;};
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
@@ -17,7 +15,6 @@ in {
       [
         nixos-wsl.nixosModules.default
         sops-nix.nixosModules.sops
-        nix-secrets.nixosModules.ssh
         nix-secrets.nixosModules.common
         home.hjemConfigurations.wsl
       ]
