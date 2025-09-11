@@ -3,38 +3,29 @@
 
   outputs = {flake-parts, ...} @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
-      systems = import inputs.systems;
+      # This is the only system I care about here
+      systems = ["x86_64-linux"];
 
       # All outputs are defined in various modules here
       imports = [./outputs];
+
+      # Mirror packages so that self references work in exported modules
+      flake.packages = inputs.nixos.packages;
     };
 
   inputs = {
-    nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    systems.url = "github:nix-systems/default";
+    # This is my primary flake
+    nixos.url = "github:michael-c-buckley/nixos";
 
-    nix-secrets = {
-      url = "git+ssh://git@github.com/michael-c-buckley/nix-secrets?shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # Reuse the inputs I care about
+    nixpkgs.follows = "nixos/nixpkgs";
+    flake-parts.follows = "nixos/flake-parts";
+    nix-secrets.follows = "nixos/nix-secrets";
+    sops-nix.follows = "nixos/sops-nix";
 
+    # The only one not present there
     nixos-wsl = {
       url = "github:nix-community/nixos-wsl";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    home = {
-      url = "github:Michael-C-Buckley/home-config";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-        systems.follows = "systems";
-      };
-    };
-
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
