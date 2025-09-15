@@ -1,5 +1,6 @@
 _: {
   imports = [
+    ./forwarders.nix
     ./gpg.nix
     ./network.nix
     ./nix.nix
