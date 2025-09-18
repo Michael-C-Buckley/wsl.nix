@@ -7,7 +7,10 @@ in {
   flake.nixosConfigurations = {
     wsl = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = {inherit self inputs system;};
+      specialArgs = {
+        inherit self inputs system;
+        customPkgs = nixos.packages.${system};
+      };
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
