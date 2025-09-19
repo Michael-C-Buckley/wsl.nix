@@ -394,11 +394,11 @@
         "sops-nix": "sops-nix"
       },
       "locked": {
-        "lastModified": 1758252256,
-        "narHash": "sha256-S7tnfEvPWxoKgzGM6gDzQVSuFzYqypFZX4+XI4F3ICs=",
+        "lastModified": 1758286822,
+        "narHash": "sha256-RlO1rT4lRKvSKZC2mz4My6Lx+CiRM0q90w7UbNnWtbM=",
         "owner": "michael-c-buckley",
         "repo": "nixos",
-        "rev": "1b09e5ae6c6431be61be8403c5774a47dbb2bbea",
+        "rev": "8e190963c849c3c545fa7a6d790b6b3a0f3b42ad",
         "type": "github"
       },
       "original": {
