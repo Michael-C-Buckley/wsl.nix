@@ -11,6 +11,7 @@
     killall
     hydra-cli
     socat
+    clinfo
 
     # Web
     luakit
