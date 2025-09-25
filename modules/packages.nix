@@ -12,8 +12,9 @@
     hydra-cli
     socat
 
-    # Browsers
-    librewolf
+    # Web
+    luakit
+    legcord
 
     # Shells
     nushell
