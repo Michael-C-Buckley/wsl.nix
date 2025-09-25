@@ -15,6 +15,7 @@
 
     # Web
     luakit
+    qutebrowser
     legcord
 
     # Shells
