@@ -1,4 +1,9 @@
 {
+  imports = [
+    ./hardware.nix
+    ./hjem.nix
+  ];
+
   networking = {
     hostName = "wsl";
     hostId = "e07f0101";

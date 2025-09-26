@@ -14,7 +14,6 @@
     clinfo
 
     # Web
-    luakit
     qutebrowser
     legcord
 

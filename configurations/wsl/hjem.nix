@@ -1,6 +1,6 @@
 {lib, ...}: {
   hjem.users.michael = {
-    environmt.sessionVariables = {
+    environment.sessionVariables = {
       NH_FLAKE = lib.mkForce "/home/michael/flakes/wsl";
     };
   };
