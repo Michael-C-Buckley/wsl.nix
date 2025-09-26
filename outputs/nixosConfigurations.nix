@@ -23,7 +23,7 @@ in {
           nixos.hjemConfigurations.wsl
         ]
         ++ [
-          ../configurations/wsl.nix
+          ../configurations/wsl
           ../modules
         ];
     };
