@@ -15,7 +15,17 @@
 
   inputs = {
     # This is my primary flake
-    nixos.url = "github:michael-c-buckley/nixos";
+    nixos = {
+      url = "github:michael-c-buckley/nixos";
+
+      # Eliminate unused inputs
+      inputs = {
+        home-manager.follows = "";
+        mangowc.follows = "";
+        nix4vscode.follows = "";
+        noctalia.follows = "";
+      };
+    };
 
     # Reuse the inputs I care about
     nixpkgs.follows = "nixos/nixpkgs";
