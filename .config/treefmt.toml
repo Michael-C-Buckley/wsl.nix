@@ -15,10 +15,6 @@ options = [
   "--write",
 ]
 
-[formatter.keep-sorted]
-command = "keep-sorted"
-includes = ["*"]
-
 [formatter.mdformat]
 command = "mdformat"
 includes = ["*.md"]
