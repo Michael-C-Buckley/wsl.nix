@@ -20,7 +20,6 @@
 
       # Eliminate unused inputs
       inputs = {
-        home-manager.follows = "";
         mangowc.follows = "";
         nix4vscode.follows = "";
         noctalia.follows = "";
