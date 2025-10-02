@@ -1,17 +1,34 @@
 {
   description = "Michael's WSL Flake";
 
-  outputs = {flake-parts, ...} @ inputs:
-    flake-parts.lib.mkFlake {inherit inputs;} {
-      # This is the only system I care about here
-      systems = ["x86_64-linux"];
-
-      # All outputs are defined in various modules here
-      imports = [./outputs];
-
-      # Mirror packages so that self references work in exported modules
-      flake.packages = inputs.nixos.packages;
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: {
+    hydraJobs = {
+      nixosConfigurations.wsl = self.nixosConfigurations.wsl.config.system.build.toplevel;
     };
+    nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = {
+        inherit inputs;
+        customPkgs = inputs.nixos.packages."x86_64-linux";
+      };
+      modules = with inputs;
+        [
+          nixos-wsl.nixosModules.default
+          sops-nix.nixosModules.sops
+          nix-secrets.nixosModules.wsl
+          nixos.hjemConfigurations.wsl
+        ]
+        ++ [
+          ./configurations/wsl
+          ./modules
+        ];
+    };
+    inherit (inputs.nixos) packages;
+  };
 
   inputs = {
     # This is my primary flake
@@ -20,6 +37,7 @@
 
       # Eliminate unused inputs
       inputs = {
+        flake-parts.follows = "";
         mangowc.follows = "";
         nix4vscode.follows = "";
         noctalia.follows = "";
@@ -31,7 +49,6 @@
 
     # Reuse the inputs I care about
     nixpkgs.follows = "nixos/nixpkgs";
-    flake-parts.follows = "nixos/flake-parts";
     nix-secrets.follows = "nixos/nix-secrets";
     sops-nix.follows = "nixos/sops-nix";
 
