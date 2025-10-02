@@ -37,7 +37,6 @@
 
       # Eliminate unused inputs
       inputs = {
-        flake-parts.follows = "";
         mangowc.follows = "";
         nix4vscode.follows = "";
         noctalia.follows = "";

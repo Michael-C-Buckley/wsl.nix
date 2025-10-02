@@ -13,6 +13,10 @@
     socat
     clinfo
 
+    # Development
+    go
+    gopls
+
     # Web
     qutebrowser
     legcord
