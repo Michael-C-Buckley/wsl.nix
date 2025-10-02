@@ -23,6 +23,9 @@
         mangowc.follows = "";
         nix4vscode.follows = "";
         noctalia.follows = "";
+        impermanence.follows = "";
+        quadlet-nix.follows = "";
+        schizofox.follows = "";
       };
     };
 
