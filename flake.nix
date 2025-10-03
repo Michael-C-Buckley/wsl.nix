@@ -38,7 +38,7 @@
       # Eliminate unused inputs
       inputs = {
         mangowc.follows = "";
-        nix4vscode.follows = "";
+        nix-vscode-extensions.follows = "";
         noctalia.follows = "";
         impermanence.follows = "";
         quadlet-nix.follows = "";
