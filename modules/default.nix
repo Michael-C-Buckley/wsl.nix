@@ -3,7 +3,7 @@ _: {
     ./forwarders.nix
     ./gpg.nix
     ./network.nix
-    ./nix.nix
+    #./nix.nix
     ./packages.nix
     ./programs.nix
     ./security.nix

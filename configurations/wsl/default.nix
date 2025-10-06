@@ -1,6 +1,5 @@
 {
   imports = [
-    ./hardware.nix
     ./hjem.nix
   ];
 
@@ -18,6 +17,8 @@
       unmanaged = ["*"];
     };
   };
+
+  hardware.graphics.useIntel = true;
 
   services.unbound.enable = true;
   system.stateVersion = "24.11";

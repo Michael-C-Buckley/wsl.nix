@@ -21,6 +21,8 @@
           sops-nix.nixosModules.sops
           nix-secrets.nixosModules.wsl
           nixos.hjemConfigurations.wsl
+          nixos.nixosModules.system-nix
+          nixos.nixosModules.hardware-intelGraphics
         ]
         ++ [
           ./configurations/wsl
@@ -42,7 +44,6 @@
         noctalia.follows = "";
         impermanence.follows = "";
         quadlet-nix.follows = "";
-        schizofox.follows = "";
       };
     };
 
