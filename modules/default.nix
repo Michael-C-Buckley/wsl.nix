@@ -7,4 +7,10 @@
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel" "video" "wireshark"];
   };
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "-d";
+  };
 }
