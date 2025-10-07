@@ -26,7 +26,7 @@
         ]
         ++ [
           ./configurations/wsl
-          ./modules
+          (inputs.import-tree ./modules)
         ];
     };
     inherit (inputs.nixos) packages;
@@ -51,6 +51,7 @@
     nixpkgs.follows = "nixos/nixpkgs";
     nix-secrets.follows = "nixos/nix-secrets";
     sops-nix.follows = "nixos/sops-nix";
+    import-tree.follows = "nixos/import-tree";
 
     # The only one not present there
     nixos-wsl = {

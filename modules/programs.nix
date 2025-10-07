@@ -15,10 +15,7 @@
       enable = true;
       silent = false;
       loadInNixShell = true;
-      nix-direnv = {
-        enable = true;
-        package = pkgs.nix-direnv;
-      };
+      nix-direnv.enable = true;
     };
 
     # Allows vscode remotes to connect
@@ -27,7 +24,6 @@
     # Nvim default, NVF provides the actual package
     neovim.defaultEditor = true;
 
-    zsh.enable = true;
     zoxide.enable = true;
   };
 }
