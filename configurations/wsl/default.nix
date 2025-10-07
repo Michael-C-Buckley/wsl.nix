@@ -18,9 +18,6 @@
     };
   };
 
-  hardware.graphics.useIntel = true;
-
   services.unbound.enable = true;
   system.stateVersion = "24.11";
-  virtualisation.docker.enable = true;
 }

@@ -22,7 +22,6 @@
           nix-secrets.nixosModules.wsl
           nixos.hjemConfigurations.wsl
           nixos.nixosModules.system-nix
-          nixos.nixosModules.hardware-intelGraphics
         ]
         ++ [
           ./configurations/wsl

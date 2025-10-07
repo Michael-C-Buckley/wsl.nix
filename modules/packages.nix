@@ -1,9 +1,4 @@
 {pkgs, ...}: {
-  fonts.packages = with pkgs; [
-    vista-fonts
-    nerd-fonts.jetbrains-mono
-  ];
-
   environment.systemPackages = with pkgs; [
     # System
     fastfetch
@@ -26,9 +21,6 @@
     tmux
     starship
 
-    # Editor
-    helix
-
     # File/Navigation
     fd
     dust
@@ -38,7 +30,6 @@
 
     # Performance
     btop
-    htop
 
     # Hardware
     usbutils
@@ -54,8 +45,5 @@
     ndisc6
     frr
     nettools
-
-    # Virtualization
-    containerlab
   ];
 }
